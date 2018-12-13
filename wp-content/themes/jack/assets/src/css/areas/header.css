@@ -1,0 +1,57 @@
+#masthead {
+	padding-top: 0;
+}
+#masthead .site-description {
+	display: none;
+}
+#masthead .site-branding {
+	display: flex;
+	margin: 0;
+}
+#masthead .site-title {
+	min-width: 110px;
+	margin: 0;
+}
+#masthead #site-navigation {
+	flex-basis: 100%;
+	font-size: 1.1em;
+	margin: 0;
+	padding-top: 0.2em;
+}
+#masthead .social-navigation {
+	min-width: 120px;
+	margin: 0;
+}
+
+#site-navigation > .menu-header-main-container {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+#site-navigation li,
+#site-navigation a {
+	font-weight: normal;
+	color: inherit;
+	vertical-align: top;
+}
+#site-navigation li:hover > a {
+	color: #0073aa;
+}
+
+#site-navigation .sub-menu a,
+#site-navigation .sub-menu {
+	background-color: transparent;
+	color: inherit;
+}
+#site-navigation .sub-menu a {
+	padding: 0.3em 0.1em;
+	margin-left: -0.1em;
+}
+/* first item */
+#site-navigation .sub-menu li:nth-child(2) a {
+	padding-top: 0.2em;
+}
+#site-navigation .submenu-expand svg {
+	top: 0;
+	bottom: 0.1em;
+}

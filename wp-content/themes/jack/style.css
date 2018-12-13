@@ -1,0 +1,18 @@
+/*
+Theme Name: Jack Store
+Theme URI: https://github.com/elpadi/jack-woocommerce
+Author: Carlos Padilla
+Author URI: https://cpadilla.thejackmag.com/
+Description: Simple One Column Theme based on twentynineteen
+Requires at least: WordPress 4.9.6
+Version: 1.0
+License: GNU General Public License v2 or later
+Template: twentynineteen
+Text Domain: jack
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+
+body {
+	color: #444;
+	font-size: 16px;
+}

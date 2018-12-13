@@ -1,0 +1,9 @@
+vendor
+wp-content/upgrade
+wp-content/uploads
+
+wp-content/plugins/*
+
+wp-content/themes/*
+!wp-content/themes/jack
+
