@@ -1,0 +1,42 @@
+#masthead {
+	padding-top: 0;
+}
+#masthead .site-description {
+	display: none;
+}
+#masthead .site-branding {
+	display: flex;
+	margin: 0;
+}
+#masthead .site-title {
+	min-width: 110px;
+	margin: 0;
+}
+#masthead #site-navigation {
+	flex-basis: 100%;
+	font-size: 1.1em;
+	margin: 0;
+	padding-top: 0.7em;
+}
+#masthead .social-navigation {
+	min-width: 120px;
+	margin: 0;
+	padding-top: 0.3em;
+}
+
+#masthead .site-logo {
+	position: static;
+}
+#masthead .site-title {
+	display: none;
+}
+#masthead .custom-logo-link {
+	border-radius: 0;
+	box-shadow: none;
+	width: 104px;
+	height: auto;
+	transition: opacity 0.2s linear;
+}
+#masthead .custom-logo-link:hover {
+	opacity: 0.6;
+}
