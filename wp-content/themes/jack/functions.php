@@ -11,6 +11,8 @@ add_action('wp_enqueue_scripts', function() {
 	$assets->css('base/overrides');
 	$assets->css('header/header');
 	$assets->css('header/nav');
+	$assets->css('content/content');
+	$assets->css('content/product-grid');
 	
 });
 

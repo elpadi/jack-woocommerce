@@ -1,3 +1,9 @@
 .site-info {
 	display: none;
 }
+.button {
+	background-color: #52987b;
+}
+.button:hover {
+	background-color: #357158
+}

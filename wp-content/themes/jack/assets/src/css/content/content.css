@@ -1,0 +1,8 @@
+#primary {
+	margin: 0 auto;
+	max-width: 980px;
+	padding: 0 10px;
+}
+#main {
+	max-width: none;
+}
