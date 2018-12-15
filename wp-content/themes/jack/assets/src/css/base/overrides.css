@@ -103,3 +103,7 @@
 #page a.remove:hover {
 	color: #f55656 !important;
 }
+
+.reset_variations {
+	display: none;
+}
