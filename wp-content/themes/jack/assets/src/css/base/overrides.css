@@ -1,18 +1,52 @@
-body a:visited,
-body a {
+#page a:visited,
+#page a {
+	text-decoration: none !important;
+}
+#page #masthead a {
+	color: inherit;
+}
+#page #masthead a:hover,
+#page #masthead li.current-menu-item a,
+#page a:visited,
+#page a {
 	color: #0adac3;
 }
-
-.button {
-	background-color: #52987b;
+#page td.product-name a,
+#page li.selected > a,
+#page li.active > a,
+#page li.is-active > a,
+#page a:hover {
+	color: #52987b;
 }
-.button:hover {
+
+#page .btn,
+#page a.button,
+#page .button {
+	background-color: #52987b;
+	color: white;
+}
+#page .button:hover {
 	background-color: #357158
+}
+#page a:not(.button) {
+	border-style: none !important;
 }
 
 #primary .woocommerce-tabs li.active a {
 	color: #a8a8a8;
 	box-shadow: none;
+}
+
+#primary .entry-header {
+	margin: 0 auto 1rem;
+}
+#primary h2::before,
+#primary .entry-title::before {
+	display: none;
+}
+
+.entry-content > .woocommerce > h2 {
+	display: none;
 }
 
 .site-info {
@@ -30,4 +64,32 @@ body a {
 	max-width: 768px;
 	font-size: 1.1em;
 	line-height: 1.4;
+}
+
+#primary .entry .entry-content {
+	max-width: none;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+.entry-content p {
+	font-size: 1.1em;
+}
+
+.woocommerce-notices-wrapper:empty {
+	display: none;
+}
+#page .woocommerce-message,
+#page .woocommerce-error,
+#page .woocommerce-info {
+	background-color: transparent;
+	color: inherit;
+	padding: 2em 0 1em;
+	border-top: 1px solid currentColor;
+}
+#page a.remove,
+#page .woocommerce-error {
+	color: #f55656;
+}
+#page a.remove:hover {
+	color: #f55656 !important;
 }

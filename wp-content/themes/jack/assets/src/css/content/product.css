@@ -6,9 +6,6 @@
 .single-product #primary .price {
 	margin-top: 23px;
 }
-.single-product #primary .entry-title::before {
-	display: none;
-}
 .woocommerce-loop-product__title span,
 .single-product #primary .entry-title span {
 	display: block;

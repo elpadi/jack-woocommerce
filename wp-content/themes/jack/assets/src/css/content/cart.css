@@ -1,0 +1,56 @@
+.woocommerce-cart .entry-content > .woocommerce {
+	max-width: none;
+	display: grid;
+	grid-template-columns: 1fr 300px;
+	grid-template-areas: "notices notices" "cart totals";
+	grid-gap: 2rem;
+	margin-top: 0;
+}
+.woocommerce-notices-wrapper {
+	grid-area: notices;
+}
+.woocommerce-cart-form {
+	grid-area: cart;
+}
+.cart-collaterals {
+	grid-area: totals;
+}
+
+#primary .cart_totals {
+	float: none;
+	width: auto;
+}
+#primary .cart_totals h2 {
+	display: none;
+}
+
+.product-remove,
+.product-thumbnail {
+	border-right-style: none;
+}
+.product-name,
+.product-thumbnail {
+	border-left-style: none;
+	text-align: left;
+}
+td.product-price,
+td.product-subtotal {
+	text-align: right;
+}
+
+#primary a.remove {
+	border-radius: 0;
+	background-color: transparent;
+	font-size: 1.1rem;
+}
+
+.woocommerce-cart #coupon_code {
+	height: 3.3em;
+	margin-top: 0.1em;
+}
+.woocommerce-cart .shipping-calculator-button {
+	margin-top: 0;
+}
+.wc-proceed-to-checkout {
+	text-align: right;
+}

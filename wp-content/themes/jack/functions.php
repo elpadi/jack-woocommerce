@@ -8,12 +8,9 @@ add_action('wp_enqueue_scripts', function() {
 	wp_enqueue_style( 'twentynineteen-parent-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
 
 	$assets = new Assets(get_stylesheet_directory_uri(), __DIR__, 'assets/src');
-	$assets->css('base/overrides');
-	$assets->css('header/header');
-	$assets->css('header/nav');
-	$assets->css('content/content');
-	$assets->css('content/product-grid');
-	$assets->css('content/product');
+	$assets->dir('base', 'css');
+	$assets->dir('header', 'css');
+	$assets->dir('content', 'css');
 	
 });
 
