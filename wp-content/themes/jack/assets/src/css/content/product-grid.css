@@ -3,6 +3,7 @@
 	grid-gap: 2em;
 	padding: 1em;
 	grid-template-columns: 1fr;
+	margin-bottom: 5%;
 }
 #primary ul.products::before,
 #primary ul.products::after {

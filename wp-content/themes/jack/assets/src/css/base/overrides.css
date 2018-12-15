@@ -40,6 +40,7 @@
 #primary .entry-header {
 	margin: 0 auto 1rem;
 }
+#primary .page-title::before,
 #primary h2::before,
 #primary .entry-title::before {
 	display: none;
@@ -47,6 +48,12 @@
 
 .entry-content > .woocommerce > h2 {
 	display: none;
+}
+#primary .woocommerce-ordering {
+	display: none;
+}
+#primary .woocommerce-breadcrumb {
+	margin-bottom: 1em;
 }
 
 .site-info {
@@ -70,6 +77,9 @@
 	max-width: none;
 	margin: 0 auto;
 	padding: 0 10px;
+}
+#primary .entry-content > .woocommerce {
+	max-width: none;
 }
 .entry-content p {
 	font-size: 1.1em;
