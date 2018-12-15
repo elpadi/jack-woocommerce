@@ -1,0 +1,38 @@
+.single-product #primary .entry-title {
+	position: relative;
+	bottom: 9px;
+	margin-bottom: 23px;
+}
+.single-product #primary .price {
+	margin-top: 23px;
+}
+.single-product #primary .entry-title::before {
+	display: none;
+}
+.woocommerce-loop-product__title span,
+.single-product #primary .entry-title span {
+	display: block;
+}
+#primary div.product {
+	margin-top: 4em;
+}
+.woocommerce-product-details__short-description {
+	font-size: 1.2em;
+	line-height: 1.2;
+}
+.single-product #primary .summary .price {
+	margin-bottom: 1em;
+}
+
+#primary .woocommerce-product-gallery img {
+	max-height: 400px;
+	width: auto;
+	margin: auto;
+}
+#primary .woocommerce-product-gallery__image--placeholder {
+	border-style: none;
+}
+
+#primary .product_meta {
+	display: none;
+}

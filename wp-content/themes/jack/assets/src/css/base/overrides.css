@@ -1,9 +1,33 @@
-.site-info {
-	display: none;
+body a:visited,
+body a {
+	color: #0adac3;
 }
+
 .button {
 	background-color: #52987b;
 }
 .button:hover {
 	background-color: #357158
+}
+
+#primary .woocommerce-tabs li.active a {
+	color: #a8a8a8;
+	box-shadow: none;
+}
+
+.site-info {
+	display: none;
+}
+
+#primary .wc-tab h2 {
+	display: none;
+}
+#tab-additional_information, #tab-title-additional_information {
+	display: none !important;
+}
+
+#primary .wc-tab {
+	max-width: 768px;
+	font-size: 1.1em;
+	line-height: 1.4;
 }
