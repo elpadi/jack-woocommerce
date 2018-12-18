@@ -16,6 +16,8 @@ add_action('wp_enqueue_scripts', function() {
 	$assets->dir('base', 'js');
 	$assets->dir('content', 'js');
 
+	$assets->js('main');
+
 });
 
 if (is_admin() == false) {

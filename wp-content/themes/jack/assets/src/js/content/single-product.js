@@ -22,5 +22,3 @@ class SingleProduct {
 	}
 
 }
-
-app.modules['single-product'] = new SingleProduct();

@@ -107,3 +107,12 @@
 .reset_variations {
 	display: none;
 }
+
+#primary div.wpcf7-mail-sent-ng, #primary div.wpcf7-aborted {
+	border-color: currentColor;
+	color: #f55656;
+}
+#primary div.wpcf7-response-output {
+	padding: 1em 1.4em;
+}
+
