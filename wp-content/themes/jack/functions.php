@@ -18,7 +18,9 @@ add_action('wp_enqueue_scripts', function() {
 
 	$assets->js('main');
 
-});
+	wp_dequeue_script('twentynineteen-priority-menu');
+
+}, 100);
 
 if (is_admin() == false) {
 
@@ -31,11 +33,9 @@ if (is_admin() == false) {
 		return str_replace($end, sprintf('<img src="%s" alt="%s">', get_stylesheet_directory_uri().'/assets/icons/logo.svg', get_bloginfo('name')).$end, $html);
 	});
 
-	add_filter('the_title', function($title) {
-		$parts = explode(' &#8211; ', $title);
-		if (count($parts) == 1) return $title;
-		return sprintf('%s<span>%s</span>', $parts[0], implode('', array_slice($parts, 1)));
-	});
+	add_filter('the_title', function($title, $id=NULL) {
+		return str_replace(' &#8211; ', '<span> &#8211; </span>', $title);
+	}, 10, 2);
 
 	/* replace cover dropdown with images */
 	add_filter('woocommerce_dropdown_variation_attribute_options_html', function($html, $args) {
