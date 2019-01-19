@@ -5,7 +5,8 @@
     "require": {
         "wpackagist-theme/twentynineteen": "*",
         "wpackagist-plugin/woocommerce": "*",
-        "wpackagist-plugin/woo-order-test": "^1.5"
+        "wpackagist-plugin/woo-order-test": "^1.5",
+        "wpackagist-plugin/contact-form-7": "^5.1"
     },
     "license": "GPL-3.0",
     "repositories":[
@@ -20,5 +21,10 @@
             "email": "padi_05@yahoo.com"
         }
     ],
+	"autoload": {
+		"psr-4": {
+			"WordpressLib\\": "wplib/src/"
+		}
+	},
     "minimum-stability": "stable"
 }
