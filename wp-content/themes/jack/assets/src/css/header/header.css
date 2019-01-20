@@ -1,16 +1,19 @@
 #masthead {
 	padding-top: 0;
 }
+#masthead .main-menu-more-toggle,
 #masthead .site-description {
 	display: none;
 }
 #masthead .site-branding {
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	margin: 0;
 }
-#masthead .site-title {
-	min-width: 110px;
-	margin: 0;
+#masthead .site-logo {
+	position: static;
+	order: -2;
 }
 #masthead #site-navigation {
 	flex-basis: 100%;
@@ -21,12 +24,22 @@
 #masthead .social-navigation {
 	min-width: 120px;
 	margin: 0;
-	padding-top: 0.3em;
+	padding-top: 0.5em;
+	order: -1;
+}
+@media (min-width: 680px) {
+	#masthead .site-branding {
+		flex-wrap: nowrap;
+	}
+	#masthead .site-logo,
+	#masthead .social-navigation {
+		order: 0;
+	}
+	#masthead .social-navigation {
+		padding-top: 0.3em;
+	}
 }
 
-#masthead .site-logo {
-	position: static;
-}
 #masthead .site-title {
 	display: none;
 }
