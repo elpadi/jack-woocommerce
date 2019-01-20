@@ -1,0 +1,9 @@
+.added_to_cart.wc-forward::before {
+	content: 'Item Added. ';
+	display: block;
+	margin-top: 0.5em;
+	color: black;
+}
+.woocommerce-message .button {
+	margin-left: 1em;
+}

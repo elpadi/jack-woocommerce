@@ -7,3 +7,4 @@ wp-content/plugins/*
 wp-content/themes/*
 !wp-content/themes/jack
 
+node_modules

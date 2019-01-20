@@ -1,3 +1,10 @@
+.single-product #primary #main {
+	margin: 0;
+}
+.single-product #primary .entry-summary {
+	max-width: none;
+	margin: 0;
+}
 .single-product #primary .entry-title {
 	position: relative;
 	bottom: 9px;
