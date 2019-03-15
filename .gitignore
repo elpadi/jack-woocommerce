@@ -8,3 +8,7 @@ wp-content/themes/*
 !wp-content/themes/jack
 
 node_modules
+wplib
+wp-config.php
+wp
+wp-content/themes/jack/assets/dist/

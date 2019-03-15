@@ -1,3 +1,5 @@
+var $ = require('jquery');
+
 class App {
 
 	constructor() {
@@ -5,7 +7,7 @@ class App {
 	}
 
 	init() {
-		jQuery(document).ready(this.onDocReady.bind(this));
+		$(document).ready(this.onDocReady.bind(this));
 	}
 
 	onDocReady() {
@@ -19,3 +21,5 @@ class App {
 	}
 
 }
+
+module.exports = App;

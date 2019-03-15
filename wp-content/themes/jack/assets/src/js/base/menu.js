@@ -1,3 +1,5 @@
+var $ = require('jquery');
+
 class Menu {
 
 	constructor() {
@@ -59,7 +61,9 @@ class Menu {
 		this.clone();
 		this.shortenMobile();
 		this.addBurger();
-		jQuery('.submenu-expand').removeClass('submenu-expand');
+		$('.submenu-expand').removeClass('submenu-expand');
 	}
 
 }
+
+module.exports = Menu;

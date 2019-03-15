@@ -12,3 +12,5 @@ class ExternalLinks {
 	}
 
 }
+
+module.exports = ExternalLinks;

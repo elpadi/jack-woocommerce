@@ -3,18 +3,8 @@
     "description": "WooCommerce shop for thejackmag.com",
     "type": "project",
     "require": {
-        "wpackagist-theme/twentynineteen": "*",
-        "wpackagist-plugin/woocommerce": "*",
-        "wpackagist-plugin/woo-order-test": "^1.5",
-        "wpackagist-plugin/contact-form-7": "^5.1"
     },
     "license": "GPL-3.0",
-    "repositories":[
-        {
-            "type":"composer",
-            "url":"https://wpackagist.org"
-        }
-    ],
     "authors": [
         {
             "name": "Carlos Padilla",

@@ -1,22 +1,17 @@
 <?php
 use WordpressLib\Theme\Assets;
 
-require_once ABSPATH.'/vendor/autoload.php';
+require_once dirname(WP_CONTENT_DIR).'/vendor/autoload.php';
 
 add_action('wp_enqueue_scripts', function() {
 
-	wp_enqueue_style( 'twentynineteen-parent-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
+	$dir = get_stylesheet_directory();
+	$url = get_stylesheet_directory_uri();
+	$path = 'assets/dist';
+	$name = WP_DEBUG ? 'dev' : 'prod';
 
-	$assets = new Assets(get_stylesheet_directory_uri(), __DIR__, 'assets/src');
-
-	$assets->dir('base', 'css');
-	$assets->dir('header', 'css');
-	$assets->dir('content', 'css');
-	
-	$assets->dir('base', 'js');
-	$assets->dir('content', 'js');
-
-	$assets->js('main');
+	wp_enqueue_script('theme-scripts', "$url/$path/$name.js", [], filemtime("$dir/$path/$name.js"));
+	wp_enqueue_style('theme-styles', "$url/$path/$name.css", [], filemtime("$dir/$path/$name.css"));
 
 	wp_dequeue_script('twentynineteen-priority-menu');
 

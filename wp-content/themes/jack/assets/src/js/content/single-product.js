@@ -1,3 +1,5 @@
+var $ = require('jquery');
+
 class SingleProduct {
 
 	constructor() {
@@ -22,3 +24,5 @@ class SingleProduct {
 	}
 
 }
+
+module.exports = SingleProduct;

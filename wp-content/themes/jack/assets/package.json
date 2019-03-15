@@ -1,0 +1,14 @@
+{
+  "name": "jack-shop-assets",
+  "version": "1.0.0",
+  "description": "Store for jack magazine, front end assets.",
+  "main": "js/main.js",
+  "repository": "https://thejackmag.com",
+  "author": "Carlos Padilla",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "feather-icons": "^4.10.0",
+    "jquery": "^3.3.1"
+  }
+}
