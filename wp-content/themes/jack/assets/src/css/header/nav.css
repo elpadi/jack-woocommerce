@@ -21,6 +21,9 @@
 	background-color: white;
 	color: inherit;
 }
+#site-navigation .sub-menu {
+	margin-top: 0.5em;
+}
 #site-navigation .sub-menu a {
 	padding: 0.3em 0.1em;
 	margin-left: -0.1em;

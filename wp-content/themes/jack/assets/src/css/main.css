@@ -1,1 +1,5 @@
 @import "../../../../twentynineteen/style.css";
+
+a {
+	outline-style: none !important;
+}

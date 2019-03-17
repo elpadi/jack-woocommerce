@@ -50,6 +50,3 @@
 	height: auto;
 	transition: opacity 0.2s linear;
 }
-#masthead .custom-logo-link:hover {
-	opacity: 0.6;
-}

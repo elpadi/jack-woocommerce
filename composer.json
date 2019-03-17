@@ -3,6 +3,7 @@
     "description": "WooCommerce shop for thejackmag.com",
     "type": "project",
     "require": {
+        "lstrojny/functional-php": "^1.9"
     },
     "license": "GPL-3.0",
     "authors": [

@@ -18,6 +18,7 @@ class App {
 				this.modules[name].init();
 			}
 		}
+		setTimeout(() => document.body.classList.add('doc-ready'), 200);
 	}
 
 }

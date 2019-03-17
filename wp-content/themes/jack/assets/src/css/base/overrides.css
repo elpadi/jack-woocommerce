@@ -18,6 +18,12 @@
 #page a:hover {
 	color: #52987b;
 }
+#page td.product-name a:hover,
+#page li.selected > a:hover,
+#page li.active > a:hover,
+#page li.is-active > a:hover {
+	color: #024602;
+}
 
 #page .btn,
 #page a.button,

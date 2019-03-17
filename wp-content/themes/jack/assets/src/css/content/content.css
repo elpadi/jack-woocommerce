@@ -6,3 +6,9 @@
 #main {
 	max-width: none;
 }
+#content {
+	transition: opacity 0.5s linear;
+}
+body:not(.doc-ready) #content {
+	opacity: 0;
+}

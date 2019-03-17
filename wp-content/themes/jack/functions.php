@@ -1,4 +1,5 @@
 <?php
+use Functional as F;
 use WordpressLib\Theme\Assets;
 
 require_once dirname(WP_CONTENT_DIR).'/vendor/autoload.php';
@@ -16,6 +17,14 @@ add_action('wp_enqueue_scripts', function() {
 	wp_dequeue_script('twentynineteen-priority-menu');
 
 }, 100);
+
+function coupon_to_insider_code($s) {
+	$i = 'insider code';
+	foreach (['coupon code','coupon'] as $w) {
+		$s = str_replace(['A '.$w, 'a '.$w, ucfirst($w), $w], ['An '.$i, 'an '.$i, ucfirst($i), $i], $s);
+	}
+	return $s;
+}
 
 if (is_admin() == false) {
 
@@ -69,6 +78,49 @@ if (is_admin() == false) {
 		if ($name == 'cover') $label = "<span>Select</span>$label";
 		return $label;
 	}, 10, 3);
+
+	add_filter('woocommerce_coupon_message', function($msg, $msg_code, $coupon) {
+		if (WP_DEBUG) {
+			var_dump(__FILE__.":".__LINE__." - ".__METHOD__, $msg, $msg_code, $coupon);
+			exit(0);
+		}
+		return __(coupon_to_insider_code($msg), 'jack');
+	}, 10, 3);
+
+	add_filter('woocommerce_coupon_error', function($err, $err_code, $coupon) {
+		switch ($err_code) {
+		case WC_Coupon::E_WC_COUPON_EXPIRED:
+			return sprintf(__('The code %s has expired.', 'jack'), $coupon->get_code());
+		case WC_Coupon::E_WC_COUPON_PLEASE_ENTER:
+		case WC_Coupon::E_WC_COUPON_NOT_EXIST:
+			$isChecked = TRUE;
+				/*
+			const E_WC_COUPON_INVALID_FILTERED               = 100;
+			const E_WC_COUPON_INVALID_REMOVED                = 101;
+			const E_WC_COUPON_NOT_YOURS_REMOVED              = 102;
+			const E_WC_COUPON_ALREADY_APPLIED                = 103;
+			const E_WC_COUPON_ALREADY_APPLIED_INDIV_USE_ONLY = 104;
+			const E_WC_COUPON_USAGE_LIMIT_REACHED            = 106;
+			const E_WC_COUPON_MIN_SPEND_LIMIT_NOT_MET        = 108;
+			const E_WC_COUPON_NOT_APPLICABLE                 = 109;
+			const E_WC_COUPON_NOT_VALID_SALE_ITEMS           = 110;
+			const E_WC_COUPON_MAX_SPEND_LIMIT_MET            = 112;
+			const E_WC_COUPON_EXCLUDED_PRODUCTS              = 113;
+			const E_WC_COUPON_EXCLUDED_CATEGORIES            = 114;
+			const WC_COUPON_SUCCESS                          = 200;
+			const WC_COUPON_REMOVED                          = 201;
+				 */
+		}
+		if (!$isChecked && WP_DEBUG) {
+			var_dump(__FILE__.":".__LINE__." - ".__METHOD__, $err, $err_code, $coupon);
+			exit(0);
+		}
+		return coupon_to_insider_code($err);
+	}, 10, 3);
+
+	add_filter('the_content', function($s) {
+		return $s;
+	}, 100);
 
 }
 
