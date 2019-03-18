@@ -1,5 +1,8 @@
 @import "../../../../twentynineteen/style.css";
 
+html {
+	box-sizing: border-box;
+}
 a {
 	outline-style: none !important;
 }

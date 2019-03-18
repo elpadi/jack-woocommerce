@@ -12,6 +12,31 @@
 	font-size: 0.8em;
 	white-space: nowrap;
 }
+.woocommerce-cart #content .coupon {
+	padding-bottom: 0 !important;
+}
+.woocommerce-cart #coupon_code,
+.woocommerce-cart #content .coupon > button[name="apply_coupon"] {
+	margin-bottom: 0.5em;
+}
+.woocommerce-cart #coupon_code {
+	width: 100% !important;
+	min-width: 0;
+	margin-right: 0;
+}
+.woocommerce-cart #content #primary .coupon > button[name="apply_coupon"] {
+	width: 100%;
+	white-space: nowrap;
+}
+@media (min-width: 420px) {
+	.woocommerce-cart #coupon_code {
+		width: calc(100% - 7.7em) !important;
+		margin-right: 0.5em;
+	}
+	.woocommerce-cart #content #primary .coupon > button[name="apply_coupon"] {
+		width: 8em;
+	}
+}
 
 @media (min-width: 769px) {
 	#primary .cart_totals {
@@ -20,6 +45,11 @@
 	}
 	#primary .cart_totals h2 {
 		display: none;
+	}
+
+	.woocommerce-cart #coupon_code,
+	.woocommerce-cart #content .coupon > button[name="apply_coupon"] {
+		margin-bottom: 0;
 	}
 
 	.woocommerce-cart .product-remove,
