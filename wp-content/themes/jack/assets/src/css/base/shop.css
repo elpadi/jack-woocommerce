@@ -7,3 +7,12 @@
 .woocommerce-message .button {
 	margin-left: 1em;
 }
+.woocommerce-result-count {
+	display: none;
+}
+.store-headline {
+	font-family: inherit;
+	color: #aaa;
+	font-size: 0.7em;
+	line-height: 1.2;
+}

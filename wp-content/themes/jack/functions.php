@@ -26,6 +26,12 @@ function coupon_to_insider_code($s) {
 	return $s;
 }
 
+function print_store_headline() {
+	printf('<pre class="store-headline">%s</pre>',
+		"Jack  -  the largest publication in the world.\n\t1000 limited edition / issue\n\tsigned + numbered"
+	);
+}
+
 if (is_admin() == false) {
 
 	add_filter('theme_mod_custom_logo', function($value) {
@@ -118,17 +124,18 @@ if (is_admin() == false) {
 		return coupon_to_insider_code($err);
 	}, 10, 3);
 
-	add_filter('the_content', function($s) {
-		return $s;
-	}, 100);
+	add_action('wp_head', function() {
+		add_action('woocommerce_before_add_to_cart_form', function() {
+			global $post, $product;
+			if ($product && preg_match('/^Volume ([0-9]+) Issue ([0-9]+) - (.*)$/', $post->post_title, $matches)) {
+				$id = intval($matches[1]) + intval($matches[2]);
+				$slug = sanitize_html_class(sanitize_title_with_dashes($matches[3]));
+				printf('<p><a href="https://thejackmag.com/issues/%d-%s/layouts" target="_blank" rel="nofollow">View Issue Content</a></p>', $id, $slug);
+			}
+		});
 
-	add_action('woocommerce_before_add_to_cart_form', function() {
-		global $post, $product;
-		if ($product && preg_match('/^Volume ([0-9]+) Issue ([0-9]+) - (.*)$/', $post->post_title, $matches)) {
-			$id = intval($matches[1]) + intval($matches[2]);
-			$slug = sanitize_html_class(sanitize_title_with_dashes($matches[3]));
-			printf('<p><a href="https://thejackmag.com/issues/%d-%s/layouts" target="_blank" rel="nofollow">View Issue Content</a></p>', $id, $slug);
-		}
+		add_action('woocommerce_before_shop_loop', 'print_store_headline', 20);
+		if (is_singular('product')) add_action('woocommerce_before_main_content', 'print_store_headline', 30);
 	});
 }
 
