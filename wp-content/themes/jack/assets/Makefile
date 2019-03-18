@@ -18,7 +18,7 @@ watch-css:
 	echo $(CSS_FILES) | tr ' ' "\n" | entr sh -c 'make dist/dev.css'
 
 dist/dev.css: $(CSS_FILES)
-	cleancss --source-map -O0 -o $@ $^
+	cleancss --source-map --source-map-inline-sources -O0 -o $@ $^
 
 dist/prod.css: $(CSS_FILES)
 	cleancss -O2 -o $@ $^
