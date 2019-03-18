@@ -38,6 +38,7 @@
 	max-height: 400px;
 	width: auto;
 	margin: auto;
+	filter: brightness(1.05);
 }
 #primary .woocommerce-product-gallery .emoji {
 	visibility: hidden;

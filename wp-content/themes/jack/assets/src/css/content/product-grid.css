@@ -17,6 +17,9 @@
 	width: auto;
 	margin: 0;
 }
+#primary ul.products img {
+	filter: brightness(1.05);
+}
 @media (min-width: 480px) {
 	#primary ul.products {
 		grid-template-columns: repeat(2, 1fr);
