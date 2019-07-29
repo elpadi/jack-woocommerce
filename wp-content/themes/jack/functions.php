@@ -127,10 +127,8 @@ if (is_admin() == false) {
 	add_action('wp_head', function() {
 		add_action('woocommerce_before_add_to_cart_form', function() {
 			global $post, $product;
-			if ($product && preg_match('/^Volume ([0-9]+) Issue ([0-9]+) - (.*)$/', $post->post_title, $matches)) {
-				$id = intval($matches[1]) + intval($matches[2]);
-				$slug = sanitize_html_class(sanitize_title_with_dashes($matches[3]));
-				printf('<p><a href="https://thejackmag.com/issues/%d-%s/layouts" target="_blank" rel="nofollow">View Issue Content</a></p>', $id, $slug);
+			if ($slug = get_post_meta($post->ID, 'website_slug', TRUE)) {
+				printf('<p><a href="https://thejackmag.com/issues/%s/layouts" target="_blank" rel="nofollow">View Issue Content</a></p>', $slug);
 			}
 		});
 
