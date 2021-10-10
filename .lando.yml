@@ -1,0 +1,7 @@
+name: jack-store
+recipe: wordpress
+config:
+  webroot: wordpress
+services:
+  node:
+    type: node:14

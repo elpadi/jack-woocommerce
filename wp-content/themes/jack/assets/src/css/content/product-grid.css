@@ -1,14 +1,16 @@
 #primary ul.products {
 	display: grid;
 	grid-gap: 2em;
-	padding: 1em;
+	padding: 1em 0;
 	grid-template-columns: 1fr;
 	margin-bottom: 5%;
 }
+
 #primary ul.products::before,
 #primary ul.products::after {
 	display: none;
 }
+
 #primary ul.products li {
 	float: none;
 	display: flex;
@@ -17,19 +19,23 @@
 	width: auto;
 	margin: 0;
 }
+
 #primary ul.products img {
 	filter: brightness(1.05);
 }
+
 @media (min-width: 480px) {
 	#primary ul.products {
 		grid-template-columns: repeat(2, 1fr);
 	}
 }
+
 @media (min-width: 720px) {
 	#primary ul.products {
 		grid-template-columns: repeat(3, 1fr);
 	}
 }
+
 @media (min-width: 980px) {
 	#primary ul.products {
 		grid-template-columns: repeat(4, 1fr);

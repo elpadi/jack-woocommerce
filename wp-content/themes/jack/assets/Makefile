@@ -12,20 +12,20 @@ prod: dist/prod.js dist/prod.css
 dev: dist/dev.js dist/dev.css
 
 watch-js:
-	watchify src/js/main.js -o dist/dev.js --debug --verbose --poll
+	simplifyify --watch --debug -o dist/dev.js src/js/main.js
 
 watch-css:
 	echo $(CSS_FILES) | tr ' ' "\n" | entr sh -c 'make dist/dev.css'
 
 dist/dev.css: $(CSS_FILES)
-	cleancss --source-map --source-map-inline-sources -O0 -o $@ $^
+	cleancss --source-map -O0 -o $@ $^
 
 dist/prod.css: $(CSS_FILES)
-	cleancss -O2 -o $@ $^
+	cleancss --source-map -O2 -o $@ $^
 
 dist/prod.js: package.json $(JS_FILES)
-	browserify src/js/main.js -o $@
+	simplifyify --debug --minify -o $@ src/js/main.js
 
 dist/dev.js: package.json $(JS_FILES)
-	browserify src/js/main.js -o $@ --debug 
+	simplifyify --debug -o $@ src/js/main.js
 
